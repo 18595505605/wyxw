@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			body{position: absolute;left: 0px;right: 0px;top: 0px;bottom: 0px; }
+			a{text-decoration: none;}
+			.a1{width: 100%;height: 100%;position: relative;overflow: hidden;}
+			.lunbotu{position: absolute;width: 400%;height: 100%;}
+			.lunbotu>li{height:100%;width: 25%; list-style: none;float: left;}
+			.lunbotu>li>img{width: 100%; height:100%;}
+			.a1>.zuo{width: 50px;height: 100px;font-size: 150px;color: white;position: absolute;opacity: 0.5;text-align: center;line-height: 100px;top: 50%;left:10px;margin-top: -50px;}
+			.a1>.you{width: 50px;height: 100px;font-size: 150px;color: white;position: absolute;opacity: 0.5;text-align: center;line-height: 100px;top: 50%;right:40px;margin-top: -50px;}
+			.a1>.tu{position: absolute;top: 0px;left: 120px;}
+			.a1>.zi{width: 320px;height: 40px; position: absolute;top: 25px;right: 210px;}
+			.a1>.zi>ul>li{list-style: none;float: left;font-size: 16px;color: white;margin-right: 51px;}
+			.a1>.zi>ul>li>ul{list-style: none;display: none;}
+			.a1>.jifa{position: absolute;top: 249px;left: 420px;color: #D5D1CE;font-size: 40px;}
+			.a1>.wangyi{position: absolute;top:320px;left: 410px;color: white;font-size: 45px;}
+			.a1>.xiazai{width: 300px;height: 70px; position: absolute;top:470px;left: 420px;color: white;background: #1B9AF7; font-size: 28px;text-align: center;line-height: 70px;}
+			.a1>.xiazai:hover{opacity: 0.8;cursor: pointer;}
+			.a2{width: 100%;height: 100%;position: relative;overflow: hidden;}
+			.a2>.lunbotu{position: absolute;width: 400%;height: 100%;}
+			.a2>.lunbotu>li{height:100%;width: 25%; list-style: none;float: left;}
+			.a2>.lunbotu>li>img{width: 100%; height:100%;}
+			.a2>.zuo{width: 50px;height: 100px;font-size: 150px;color: white;position: absolute;opacity: 0.5;text-align: center;line-height: 100px;top: 50%;left:10px;margin-top: -50px;}
+			.a2>.you{width: 50px;height: 100px;font-size: 150px;color: white;position: absolute;opacity: 0.5;text-align: center;line-height: 100px;top: 50%;right:40px;margin-top: -50px;}
+			.a4{width: 100%;height: 100%;overflow: hidden;}
+			.a4-0{width: 100%; height: 100%;position: absolute;}
+			.a4-0>img{width: 100%; height: 100%;}
+			.a4>.a4-1{width: 64%; height: 100%;float: left;}
+			.a4>.a4-1>img{width: 100%; height: 100%;}
+			.a4>.a4-2{width: 18%; height: 100%;float: left;}
+			.a4>.a4-2>img{ height: 100%;}
+			.a4>.a4-3{width: 18%; height: 100%;float: left;}
+			.a4>.a4-3>img{height: 100%;}
+			.a5{width: 100%;height: 83%;background: #F9F9F9;position: relative;overflow: hidden;}
+			.a5-1{width: 460px;height: 70px;position: absolute;left: 50%; margin-left: -230px;margin-top: 2%;font-size: 47px;}
+			.a5-2{width: 900px;height: 380px; position: absolute;left: 50%;margin-left: -450px;margin-top: 9%;}
+			.a5-2>ul>li{width: 130px;height: 251px;margin-left: 42px;margin-top: 50px;list-style: none;float: left;}
+			.a5-2>ul>li>img{width: 100%;height: 100%;}
+			.a5-2-1{display: none;}
+			.off{transform: scale(1.3);transition: 1s;}
+			.a6{width: 100%;height: 60%;background: #F9F9F9;overflow: hidden;}
+			.a6-1{width: 240px;height: 70px;position: absolute;left: 50%; margin-left: -80px;margin-top: 0%;font-size: 40px;}
+			.a6-2{width: 200px;height: 50px;position: absolute;left: 50%; margin-left: -65px;margin-top: 4%;font-size: 20px;}
+			.a6-3{width: 100px;height: 100px;margin-left: 35%;position: absolute;margin-top: 100px;background: url(img/news_app_icon_common.png)no-repeat;background-position-y: -196px;}
+			.a6-4{width: 100px;height: 100px;margin-left: 47%;position: absolute;margin-top: 100px;background: url(img/news_app_icon_common.png)no-repeat;background-position-y: -96px;}
+			.a6-5{width: 100px;height: 100px;margin-left:59%;position: absolute;margin-top: 100px;background: url(img/news_app_icon_common.png)no-repeat;background-position-y: 6px;}
+			.a6-6{width: 840px;height: 80px;position: absolute;left: 50%; margin-left: -420px;margin-top: 16%;}
+			.a6-6>p:nth-child(1){float: left;}
+			.a6-6>p:nth-child(2){float: right;}
+			.a6-6>p:nth-child(3){float: left;}
+			.a6-6>p:nth-child(4){float: right;}
+			.a6-6>p:nth-child(5){float: left;}
+			.a7{width: 100%;height:10%;background: #444444;overflow: hidden;}
+			.a7>ul{width: 75%;margin:auto;line-height: 65px;}
+			.a7>ul>li{float: left;list-style: none;font-size: 14px;color: #DDDDDD;margin-left: 5px;}
+			.a8>ul{width: 20px;height: 150px;position: fixed;top: 65%;right: 10px;}
+			.a8>ul>li{width: 10px;height: 10px;text-align: center;font-size: 40px;line-height: 5px;cursor: pointer; list-style: none;color: #C2C2C2;}
+			.a8>ul>li:nth-child(n+2){margin-top: 15px;}
+		</style>
+	</head>
+	<body>
+			<div class="a1">
+				<ul class="lunbotu">
+					<li><img src="img/news_app_img_sk.jpg"/></li>
+					<li><img src="img/news_app_img_ds.jpg" /></li>
+					<li><img src="img/news_app_img_cr.jpg" /></li>
+					<li><img src="img/news_app_img_sp.jpg"/></li>
+				</ul>
+				<div class="zuo" style="cursor: pointer;">
+					&lt;
+				</div>
+				<div class="you"style="cursor: pointer;">
+					&gt;
+				</div>
+				<div class="tu">
+					<img src="img/news_app_download_logo.png"style="cursor: pointer;"/>
+				</div>
+				<div class="zi">
+					<ul>
+						<li><a href="#"><b style="color: white;">首页</b></a><hr/></li>
+						<li><b style="color: #AFAAA2; cursor: pointer;">活动新闻</b>
+							<ul>
+								<li>军事类</li>
+								<li>八卦类</li>
+							</ul>
+						</li>
+						<li><b style="color: #AFAAA2; cursor: pointer;">更新日志</b>
+							<ul>
+								<li>最近一周</li>
+								<li>最近一月</li>
+								<li>最近三月</li>
+								<li>最近一年</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="jifa">
+					激     发     每     个     人     的     思     考
+				</div>
+				<div class="wangyi">
+					<h1>网易新闻客户端</h1>
+				</div>
+				<div class="xiazai">
+					<h4>免费下载</h4>
+				</div>
+			</div>
+			<div class="a2">
+				<ul class="lunbotu">
+					<li><img src="img/5version (1).jpg"/></li>
+					<li><img src="img/fouryears.jpg" /></li>
+					<li><img src="img/toutiao.jpg" /></li>
+					<li><img src="img/pcdiy0807.jpg"/></li>
+				</ul>
+				<div class="zuo" style="cursor: pointer;">
+					&lt;
+				</div>
+				<div class="you"style="cursor: pointer;">
+					&gt;
+				</div>
+			</div>
+			<div class="a4">
+				<div class="a4-0">
+					<img src="img/news_app_img_taidu_index.jpg"/>
+				</div>
+				<div class="a4-1">
+					<img src="img/news_app_img_taidu_chk.jpg"/>
+				</div>
+				<div class="a4-2">
+					<img src="img/news_app_img_taidu_fbb.jpg"/>
+				</div>
+				<div class="a4-3">
+					<img src="img/news_app_img_taidu_ly.jpg"/>
+				</div>
+			</div>
+			<div class="a5">
+				<div class="a5-1">
+					网&#8197;易&#8197;新&#8197;闻&#8197;合&#8197;作&#8197;手&#8197;机
+				</div>
+				<div class="a5-2">
+					<ul>
+						<li><img src="img/news_app_img_phone_lnk900.jpg"/>
+						</li>
+						<li><img src="img/news_app_img_phone_hwmate.jpg"/></li>
+						<li class="a5-3"><img src="img/news_app_img_phone_oppon1.jpg"/></li>
+						<li><img src="img/news_app_img_phone_vivo.jpg"/></li>
+						<li><img src="img/qqqqq.jpg"/></li>
+					</ul>
+				</div>
+			</div>
+			<div class="a6">
+				<div class="a6-1">
+					关注我们
+				</div>
+				<div class="a6-2">
+					FOLLOW US
+				</div>
+				<div class="a6-3"></div>
+				<div class="a6-4"></div>
+				<div class="a6-5"></div>
+				<div class="a6-6">
+					<p>网易新闻客户端易信： 网易新闻</p>
+					<p>网易新闻客户端微信： neteasenewsapp或1400488533</p>
+					<p>网易新闻客户端用户交流QQ群： 190991883</p>
+					<p>网易新闻客户端媒体开放平台QQ群： 137953917</p>
+					<p>网易新闻客户端金币商城邮箱： newsclub@vip.163.com</p>
+				</div>
+			</div>
+			<div class="a7">
+				<ul>
+					<li>©1997-2015 网易公司版权所有</li>
+					<li>About NetEase</li>
+					<li>|</li>
+					<li>公司简介</li>
+					<li>|</li>
+					<li>联系方法</li>
+					<li>|</li>
+					<li>招聘信息</li>
+					<li>|</li>
+					<li>客户服务</li>
+					<li>|</li>
+					<li>隐私政策</li>
+					<li>|</li>
+					<li>广告服务</li>
+					<li>|</li>
+					<li>网站地图</li>
+					<li>|</li>
+					<li>意见反馈</li>
+					<li>|</li>
+					<li>不良信息举报</li>
+				</ul>
+			</div>
+			<div class="a8">
+				<ul>
+					<li>·</li>
+					<li>·</li>
+					<li>·</li>
+					<li>·</li>
+					<li>·</li>
+				</ul>
+			</div>
+	</body>
+	<script src="lib 架包/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		 $(function(){
+		    	var flag=true;
+			    var index=0;
+			    $(".a8>ul>li").eq(0).css({"font-size":"0px","border-radius":"50%","border":"1px solid #C2C2C2"});
+			    $('html,body').animate({"scrollTop":0});
+			    document.addEventListener('mousewheel',function (event) {
+			    	var h=$('body').height();
+			       	event.preventDefault();
+			        if(flag) {       	
+			            flag = false;
+			            if(event.deltaY>0){            	
+			                index++;
+			                index = index > 4 ? 4 : index;  
+			                	if(index==2){
+									setTimeout(function(){
+										$(".a4-0").fadeOut(1000);
+									},2000)
+			               	}
+			                $(".a8>ul>li").eq(index).css({"font-size":"0px","border-radius":"50%","border":"1px solid #C2C2C2"}).siblings().css({"font-size":"","border-radius":"","border":""});
+			               $('html,body').stop().animate({"scrollTop": (h * index+'px')},1000,function(){
+			                    flag = true; 
+			                });
+			            }else{           	
+			                flag = false;
+			                index--;
+			                index = index < 0 ? 0 : index;
+			                $(".a8>ul>li").eq(index).css({"font-size":"0px","border-radius":"50%","border":"1px solid #C2C2C2"}).siblings().css({"font-size":"","border-radius":"","border":""});
+			                $('html,body').stop().animate({"scrollTop": h * index},1000,function(){
+			                    flag = true;
+			                });
+			            }
+			        }
+			    })
+			    
+			    var a=0;
+				$(".zuo").click(function(){
+					a--;
+					a=a<0?3:a;
+					$(".lunbotu").stop().animate({'margin-left':-100*a+"%"},1000);
+				})
+				$(".you").click(function(){
+					a++;
+					a=a>3?0:a;
+					$(".lunbotu").stop().animate({'margin-left':-100*a+"%"},1000);
+				})
+				
+				var b=0;
+				$(".a2>.zuo").click(function(){
+					b--;
+					b=a<0?3:a;
+					$(".a2>.lunbotu").stop().animate({'margin-left':-100*b+"%"},1000);
+				})
+				$(".a2>.you").click(function(){
+					b++;
+					b=b>3?0:b;
+					$(".a2>.lunbotu").stop().animate({'margin-left':-100*b+"%"},1000);
+				})
+				
+				var c=0;
+				$(".a3>.zuo").click(function(){
+					c--;
+					c=c<0?4:c;
+					$(".a3>.lunbotu").stop().animate({'margin-left':-100*c+"%"},1000);
+				})
+				$(".a3>.you").click(function(){
+					c++;
+					c=c>4?0:c;
+					$(".a3>.lunbotu").stop().animate({'margin-left':-100*c+"%"},1000);
+				})
+			
+			
+			$(".a1>.zi>ul>li").click(function(){
+				$(this).children("ul").toggle();
+			})
+			$(".a1>.zi>ul>li>ul>li").hover(function(){
+				$(this).css("color","black");
+			},function(){
+				$(this).css("color","");
+			})
+			$(".a4-1>img").click(function(){
+				$(".a4-2>img").animate({'margin-left':0+"%"},700);
+				$(".a4-3>img").animate({'margin-left':0+"%"},700);
+			})
+			$(".a4-2>img").click(function(){
+				$(this).animate({'margin-left':-240+"%"},700);
+				$(".a4-3>img").animate({'margin-left':0+"%"},700);
+			})
+			$(".a4-3>img").click(function(){
+				$(this).animate({'margin-left':-240+"%"},700);
+				$(".a4-2>img").animate({'margin-left':-240+"%"},700);
+			})
+			$(".a5-3").addClass("off");
+			$(".a5-2>ul>li").hover(function(){
+				$(this).addClass("off").siblings().removeClass("off").css("transition","1s");
+			},function(){
+				$(".a5-3").addClass("off").siblings().removeClass("off");
+			})
+
+   		 })
+	</script>
+</html>
